@@ -112,6 +112,22 @@ const HomePage = () => {
     } catch (err) {
       toast.error('Failed to delete task');
     }
+};
+
+  const handleReorderTasks = async (taskIds) => {
+    try {
+      setLoading(true);
+      await taskService.reorderTasks(taskIds);
+      // Update local state to reflect new order
+      const reorderedTasks = taskIds.map(id => tasks.find(t => t.id === id)).filter(Boolean);
+      const remainingTasks = tasks.filter(t => !taskIds.includes(t.id));
+      setTasks([...reorderedTasks, ...remainingTasks]);
+      toast.success('Tasks reordered successfully!');
+    } catch (err) {
+      toast.error('Failed to reorder tasks');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleFilterChange = (filterName, value) => {
@@ -167,12 +183,14 @@ const HomePage = () => {
                 actionLabel="Add Task"
                 onAction={() => setShowAddForm(true)}
               />
-            ) : (
+) : (
               <TaskList
                 tasks={filteredTasks}
                 categories={categories}
                 onToggleTask={toggleTask}
                 onDeleteTask={deleteTask}
+                onReorderTasks={handleReorderTasks}
+                loading={loading}
               />
             )}
           </div>

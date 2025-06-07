@@ -22,6 +22,27 @@
   }
 }
 
+/* Drag and Drop Styles */
+.dragging {
+  @apply opacity-50 shadow-2xl transform rotate-2 scale-105 z-50;
+}
+
+.drag-overlay {
+  @apply shadow-2xl transform rotate-3 opacity-90;
+}
+
+.drop-indicator {
+  @apply border-2 border-dashed border-primary bg-primary bg-opacity-5 rounded-xl;
+}
+
+.drag-handle {
+  @apply cursor-grab active:cursor-grabbing;
+}
+
+.drag-handle:hover {
+  @apply bg-surface-100 rounded-lg;
+}
+
 /* Custom styling for React Toastify */
 .Toastify__toast {
   @apply rounded-lg shadow-lg;

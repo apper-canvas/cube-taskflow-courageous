@@ -55,7 +55,33 @@ class TaskService {
       throw new Error('Task not found');
     }
     this.data.splice(index, 1);
-    return true;
+return true;
+  }
+
+  async reorderTasks(taskIds) {
+    await delay(300);
+    try {
+      // Create a new array to maintain order
+      const reorderedTasks = [];
+      
+      // First, add tasks in the new order
+      taskIds.forEach(id => {
+        const task = this.data.find(t => t.id === id);
+        if (task) reorderedTasks.push(task);
+      });
+      
+      // Add any tasks not in the reorder list (shouldn't happen in normal usage)
+      this.data.forEach(task => {
+        if (!taskIds.includes(task.id)) {
+          reorderedTasks.push(task);
+        }
+      });
+      
+      this.data = reorderedTasks;
+      return [...this.data];
+    } catch (error) {
+      throw new Error('Failed to reorder tasks');
+    }
   }
 }
 

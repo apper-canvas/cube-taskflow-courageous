@@ -43,11 +43,14 @@ export default {
         'neu-dark': '5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.05)'
       },
       borderRadius: { xl: '0.75rem', '2xl': '1rem' },
-      animation: {
+animation: {
         'bounce-gentle': 'bounce 2s infinite',
         'pulse-slow': 'pulse 3s infinite',
         'fade-in': 'fadeIn 0.3s ease-out',
-        'slide-up': 'slideUp 0.3s ease-out'
+        'slide-up': 'slideUp 0.3s ease-out',
+        'drag-enter': 'dragEnter 0.2s ease-out',
+        'drag-leave': 'dragLeave 0.2s ease-out',
+        'drop-success': 'dropSuccess 0.3s ease-out'
       },
       keyframes: {
         fadeIn: {
@@ -57,6 +60,19 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(100%)' },
           '100%': { transform: 'translateY(0)' }
+        },
+        dragEnter: {
+          '0%': { transform: 'scale(1)', borderColor: 'transparent' },
+          '100%': { transform: 'scale(1.02)', borderColor: '#5B21B6' }
+        },
+        dragLeave: {
+          '0%': { transform: 'scale(1.02)', borderColor: '#5B21B6' },
+          '100%': { transform: 'scale(1)', borderColor: 'transparent' }
+        },
+        dropSuccess: {
+          '0%': { transform: 'scale(1)', backgroundColor: 'white' },
+          '50%': { transform: 'scale(1.05)', backgroundColor: '#10B981' },
+          '100%': { transform: 'scale(1)', backgroundColor: 'white' }
         }
       }
     },
