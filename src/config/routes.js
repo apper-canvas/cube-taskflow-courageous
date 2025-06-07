@@ -1,19 +1,19 @@
-import Home from '../pages/Home';
+import HomePage from '../components/pages/HomePage';
 import NotFound from '../pages/NotFound';
 
 const routes = {
   tasks: {
-    id: 'tasks',
+    component: HomePage,
     label: 'My Tasks',
     icon: 'CheckSquare',
-    component: Home,
     path: '/'
   },
   archive: {
+archive: {
     id: 'archive',
     label: 'Archive',
     icon: 'Archive',
-    component: Home,
+    component: HomePage,
     path: '/archive'
   }
 };
