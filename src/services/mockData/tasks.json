@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "Review quarterly financial reports",
+    "description": "Analyze Q3 performance metrics and prepare presentation for board meeting",
+    "category": "Work",
+    "priority": "high",
+    "dueDate": "2024-01-15",
+    "completed": false,
+    "createdAt": "2024-01-10T09:00:00Z",
+    "completedAt": null
+  },
+  {
+    "id": "2",
+    "title": "Schedule dental appointment",
+    "description": "Book annual cleaning and checkup with Dr. Smith's office",
+    "category": "Personal",
+    "priority": "medium",
+    "dueDate": "2024-01-20",
+    "completed": false,
+    "createdAt": "2024-01-08T14:30:00Z",
+    "completedAt": null
+  },
+  {
+    "id": "3",
+    "title": "Buy groceries for weekend dinner party",
+    "description": "Need ingredients for pasta dishes, wine, and dessert for 8 people",
+    "category": "Shopping",
+    "priority": "medium",
+    "dueDate": "2024-01-13",
+    "completed": true,
+    "createdAt": "2024-01-05T16:45:00Z",
+    "completedAt": "2024-01-12T10:15:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Update portfolio website",
+    "description": "Add recent projects and refresh design to showcase new skills",
+    "category": "Work",
+    "priority": "low",
+    "dueDate": null,
+    "completed": false,
+    "createdAt": "2024-01-03T11:20:00Z",
+    "completedAt": null
+  },
+  {
+    "id": "5",
+    "title": "Call mom for her birthday",
+    "description": "Mom's 65th birthday - don't forget to wish her well and catch up",
+    "category": "Personal",
+    "priority": "high",
+    "dueDate": "2024-01-18",
+    "completed": false,
+    "createdAt": "2024-01-01T19:00:00Z",
+    "completedAt": null
+  }
+]

@@ -1,0 +1,40 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-200;
+  }
+  body {
+    @apply font-sans antialiased bg-white text-surface-900;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom styling for React Toastify */
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+}
+
+.Toastify__toast--success {
+  @apply bg-accent text-white;
+}
+
+.Toastify__toast--error {
+  @apply bg-red-500 text-white;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white bg-opacity-30;
+}
